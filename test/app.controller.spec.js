@@ -1,17 +1,17 @@
 import { Test } from '@nestjs/testing';
-import { AppController } from './app.controller';
-import { InvitationsService } from './invitations.service';
+import { InvitationsController } from '../src/invitations/invitations.controller';
+import { InvitationsService } from '../src/invitations/invitations.service';
 
 describe('AppController', () => {
   let appController;
 
   beforeEach(async () => {
     const app = await Test.createTestingModule({
-      controllers: [AppController],
+      controllers: [InvitationsController],
       providers: [InvitationsService],
     }).compile();
 
-    appController = app.get(AppController);
+    appController = app.get(InvitationsController);
   });
 
   describe('root', () => {
