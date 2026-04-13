@@ -1,0 +1,22 @@
+{
+  "name": "home-feed-module",
+  "version": "1.0.0",
+  "description": "Home feed recommendation module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest",
+    "test:unit": "jest --projects unit",
+    "test:integration": "jest --projects integration",
+    "test:e2e": "jest --projects e2e"
+  },
+  "dependencies": {
+    "express": "^4.18.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  },
+  "keywords": ["feed", "recommendation", "social"],
+  "author": "",
+  "license": "ISC"
+}
