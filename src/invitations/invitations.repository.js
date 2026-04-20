@@ -26,7 +26,7 @@ export default class InvitationsRepository {
   }
 
   async getAllReceivedByUser(userId, status) {
-    return Array.from(this.invitations.values()).filter(
+    return Array.from(this.invitations.values()).filter(invitation=>
       invitation.recipientUserId === userId &&
         (status &&
         invitation.status === status),
@@ -34,7 +34,7 @@ export default class InvitationsRepository {
   }
 
   async getAllSentByUser(userId, status) {
-    return Array.from(this.invitations.values()).filter(
+    return Array.from(this.invitations.values()).filter(invitation=>
       invitation.senderUserId === userId &&
         (status &&
         invitation.status === status),
